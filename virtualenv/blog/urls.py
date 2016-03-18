@@ -7,7 +7,9 @@ urlpatterns = [
     url(r'^post/(?P<pk>\d+)/publish/$', views.post_publish, name='post_publish'),
     url(r'^post/(?P<pk>\d+)/edit/$', views.post_edit, name='post_edit'),
     url(r'^post/(?P<pk>\d+)/remove/$', views.post_remove, name='post_remove'),
+    url(r'^post/(?P<pk>\d+)/comment/$', views.add_comment_to_post, name='add_comment_to_post'), #pass in post's pk
+    url(r'^comment/(?P<pk>\d+)/approve/$', views.comment_approve, name='comment_approve'), #pass in comments' pk
+    url(r'^comment/(?P<pk>\d+)/remove/$', views.comment_remove, name='comment_remove'), #pass in comments' pk
     url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),# Django will take everything that you place here and transfer it to a view as a variable called pk. 
     url(r'^$', views.post_list, name='post_list'), # an empty string will match because http://127.0.0.1:8000/ is not a part of URL.
-] # This pattern will tell Django that views.post_list is the right place to go if someone enters your website at the 'http://127.0.0.1:8000/' address.
-  # name='post_list' is the name of the URL that will be used to identify the view.
+] # name='post_list' is the name of the URL that will be used to identify the view.

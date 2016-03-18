@@ -30,6 +30,18 @@ h1,h2,h3,h4 {
 	font-size:26pt;
 	margin-right: 20px;
 }
-.post h1, .post h1 a, .post h1 a:visited {
+.post h1, .post h1 a, .post h1 a:visited, .post a {
+	color: #749BAB;
+}
+
+.login_table table {
+	color: #749BAB;
+}
+
+.comment {
+	margin: 20px 0px 20px 20px;
+}
+
+.comment strong {
 	color: #749BAB;
 }
